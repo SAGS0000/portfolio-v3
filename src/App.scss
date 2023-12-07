@@ -1,0 +1,32 @@
+// #root {
+//   max-width: 1280px;
+//   /* margin: 0 auto; */
+//   /* text-align: center; */
+// }
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header"
+    "nav main";
+  flex-direction: column;
+  height: 100vh;
+  header {
+    grid-area: header;
+  }
+  nav {
+    grid-area: nav;
+  }
+  main {
+    grid-area: main;
+    overflow-y: scroll;
+  }
+}
