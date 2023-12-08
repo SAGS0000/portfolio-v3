@@ -19,6 +19,24 @@ body {
     "nav main";
   flex-direction: column;
   height: 100vh;
+  z-index: 20;
+  .overlay {
+    background: linear-gradient(
+      rgba($color: green, $alpha: 0.15),
+      rgba($color: green, $alpha: 0.15) 3px,
+      transparent 3px,
+      transparent 9px
+    );
+    background-size: 100% 9px;
+    height: 100%;
+    width: 100%;
+    animation: pan-overlay 22s infinite linear;
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    top: 0px;
+  }
+
   header {
     grid-area: header;
   }
@@ -28,5 +46,15 @@ body {
   main {
     grid-area: main;
     overflow-y: scroll;
+  }
+}
+
+@keyframes pan-overlay {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: 0% -100%;
   }
 }

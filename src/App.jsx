@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 const App = () => {
   return (
     <div className="layout">
+      {/* <div className="overlay"></div> */}
       <HeroSection />
       <Navbar />
       <main>
