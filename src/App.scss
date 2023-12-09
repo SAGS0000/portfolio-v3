@@ -9,7 +9,10 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
+.sb {
+  display: block;
+  margin-bottom: 2rem;
+}
 .layout {
   display: grid;
   grid-template-columns: 300px 1fr;

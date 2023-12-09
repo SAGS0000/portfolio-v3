@@ -3,6 +3,20 @@ header {
   margin: 0;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  .image-container {
+    width: 120px;
+    height: 150px;
+    position: absolute;
+    background-color: green;
+    top: 0;
+    right: 0;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
   h1,
   h2,
   h3 {
@@ -22,72 +36,5 @@ header {
   }
   h3 {
     font-size: 1rem;
-  }
-
-  .card {
-    height: 200px;
-    width: auto;
-    display: flex;
-    border: 1px solid rgba($color: green, $alpha: 1);
-    aspect-ratio: 9/11;
-    border-radius: 1rem;
-    background-color: rgba($color: green, $alpha: 0.1);
-    overflow: hidden;
-    position: relative;
-    z-index: 10;
-    &::before,
-    &::after {
-      content: "";
-      height: 5px;
-      position: absolute;
-      z-index: 4;
-      left: 50%;
-      translate: -50% 0%;
-      background-color: white;
-    }
-    &::before {
-      width: 15%;
-      top: 0rem;
-      border-bottom-left-radius: 1rem;
-      border-bottom-right-radius: 1rem;
-    }
-    &::after {
-      width: 25%;
-      bottom: 0rem;
-      border-top-left-radius: 1rem;
-      border-top-right-radius: 1rem;
-    }
-    .screen-image {
-      background-image: url("../assets/pic.jpeg");
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      z-index: 1;
-      left: 0px;
-      top: 0px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      // background-size: cover;
-      // background-size: -50%;
-      // background-position: 0% 0%;
-      filter: sepia(100%) hue-rotate(160deg);
-      opacity: 0.6;
-    }
-    .screen-overlay {
-      background: linear-gradient(
-        rgba($color: green, $alpha: 0.15),
-        rgba($color: green, $alpha: 0.15) 3px,
-        transparent 3px,
-        transparent 9px
-      );
-      background-size: 100% 9px;
-      height: 100%;
-      width: 100%;
-      animation: pan-overlay 22s infinite linear;
-      position: absolute;
-      z-index: 2;
-      left: 0px;
-      top: 0px;
-    }
   }
 }
